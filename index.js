@@ -146,7 +146,7 @@ async function setup(nat, mem) {
     let loginTag = "FreeBSD/amd64 (freebsd) (ttyv0)";
     await waitFor(vmName, loginTag);
 
-    await execSSH("ntpdate -b pool.ntp.org", "Sync FreeBSD time");
+    //await execSSH("ntpdate -b pool.ntp.org", "Sync FreeBSD time");
 
     let cmd1 = "mkdir -p /Users/runner/work && ln -s /Users/runner/work/  work";
     await execSSH(cmd1, "Setting up VM");
